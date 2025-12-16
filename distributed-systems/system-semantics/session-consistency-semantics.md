@@ -1,5 +1,20 @@
 # Session / Client Consistency Semantics
 
+## Оглавление
+
+1. [Введение](#введение)
+2. [Read-Your-Writes Consistency](#read-your-writes-consistency)
+3. [Monotonic Reads Consistency](#monotonic-reads-consistency)
+4. [Monotonic Writes Consistency](#monotonic-writes-consistency)
+5. [Writes-Follow-Reads Consistency](#writes-follow-reads-consistency)
+6. [Session Guarantees (Общее понятие)](#session-guarantees-общее-понятие)
+7. [Sticky Sessions Consistency](#sticky-sessions-consistency)
+8. [Сравнительная таблица всех гарантий](#сравнительная-таблица-всех-гарантий)
+9. [Практические рекомендации](#практические-рекомендации)
+10. [Заключение](#заключение)
+
+---
+
 ## Введение
 
 Когда мы говорим про распределенные системы, часто обсуждаем Strong Consistency (сильная согласованность), Eventual Consistency (конечная согласованность) и другие модели на уровне системы. Но есть ещё один важный аспект: **какие гарантии получает конкретный клиент или сессия** при работе с системой.

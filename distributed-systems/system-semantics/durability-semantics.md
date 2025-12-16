@@ -1,5 +1,23 @@
 # Durability Semantics (Семантика Долговечности Данных)
 
+## Оглавление
+
+1. [Введение](#введение)
+2. [In-memory Durability (Volatile)](#1-in-memory-durability-volatile--энергозависимая-память)
+3. [Local Durability](#2-local-durability--локальная-долговечность)
+4. [Write-Ahead Logging (WAL)](#3-write-ahead-logging-wal--журнал-опережающей-записи)
+5. [Fsync Durability](#4-fsync-durability--гарантия-записи-на-физический-диск)
+6. [Replicated Durability](#5-replicated-durability--реплицированная-долговечность)
+7. [Quorum Durability](#6-quorum-durability--кворумная-долговечность)
+8. [Geo-Replicated Durability](#7-geo-replicated-durability--географически-распределённая-долговечность)
+9. [Acknowledgement Durability Semantics](#8-acknowledgement-durability-semantics--семантика-подтверждений)
+10. [Сравнительная таблица Durability Levels](#сравнительная-таблица-durability-levels)
+11. [Общие Рекомендации](#общие-рекомендации)
+12. [Распространённые Мифы](#распространённые-мифы)
+13. [Заключение](#заключение)
+
+---
+
 ## Введение
 
 **Durability Semantics** (семантика долговечности) — это набор гарантий, определяющих когда и при каких условиях данные становятся постоянными и переживают различные типы сбоев.

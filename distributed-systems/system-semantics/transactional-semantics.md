@@ -1,5 +1,26 @@
 # Transactional Semantics (Транзакционная Семантика)
 
+## Оглавление
+
+1. [Введение](#введение)
+2. [ACID: Фундаментальные свойства транзакций](#acid-фундаментальные-свойства-транзакций)
+3. [Atomicity (Атомарность)](#1-atomicity-атомарность)
+4. [Consistency (Согласованность)](#2-consistency-согласованность-через-invariants)
+5. [Isolation (Изоляция)](#3-isolation-изоляция)
+6. [Durability (Долговечность)](#4-durability-долговечность)
+7. [Exactly-Once Effects](#5-exactly-once-effects-эффекты-ровно-один-раз)
+8. [Distributed Transactions](#6-distributed-transactions-распределённые-транзакции)
+9. [Two-Phase Commit (2PC)](#7-two-phase-commit-2pc)
+10. [Three-Phase Commit (3PC)](#8-three-phase-commit-3pc)
+11. [Saga Pattern](#9-saga-pattern-паттерн-сага)
+12. [Compensation Semantics](#10-compensation-semantics-семантика-компенсации)
+13. [Outbox Pattern](#11-outbox-pattern-паттерн-исходящих-сообщений)
+14. [Сравнительная таблица подходов](#сравнительная-таблица-подходов)
+15. [Best Practices](#best-practices-лучшие-практики)
+16. [Заключение](#заключение)
+
+---
+
 ## Введение
 
 **Transactional Semantics** (транзакционная семантика) — это набор гарантий, определяющих как группа операций выполняется атомарно, согласованно и изолированно в распределённой системе.

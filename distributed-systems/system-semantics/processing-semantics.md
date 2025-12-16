@@ -1,5 +1,21 @@
 # Processing Semantics (Семантика Обработки)
 
+## Оглавление
+
+1. [Введение](#введение)
+2. [Idempotent Processing (Идемпотентная Обработка)](#1-idempotent-processing-идемпотентная-обработка)
+3. [Non-Idempotent Processing (Неидемпотентная Обработка)](#2-non-idempotent-processing-неидемпотентная-обработка)
+4. [Deterministic Processing (Детерминированная Обработка)](#3-deterministic-processing-детерминированная-обработка)
+5. [Non-Deterministic Processing (Недетерминированная Обработка)](#4-non-deterministic-processing-недетерминированная-обработка)
+6. [Replayable Processing (Переигрываемая Обработка)](#5-replayable-processing-переигрываемая-обработка)
+7. [Side-Effect-Free Processing (Обработка Без Побочных Эффектов)](#6-side-effect-free-processing-обработка-без-побочных-эффектов)
+8. [Side-Effectful Processing (Обработка С Побочными Эффектами)](#7-side-effectful-processing-обработка-с-побочными-эффектами)
+9. [External Side-Effect Semantics (Семантика Внешних Побочных Эффектов)](#8-external-side-effect-semantics-семантика-внешних-побочных-эффектов)
+10. [Заключение и Взаимосвязи](#заключение-и-взаимосвязи)
+11. [Дополнительные ресурсы и паттерны](#дополнительные-ресурсы-и-паттерны)
+
+---
+
 ## Введение
 
 **Processing Semantics** (семантика обработки) — это набор гарантий и свойств, которые определяют, как система обрабатывает сообщения, события и операции. В отличие от **Delivery Semantics** (семантики доставки), которая фокусируется на том, *сколько раз сообщение доставляется*, processing semantics описывает *как именно обрабатывается* каждая доставка.
